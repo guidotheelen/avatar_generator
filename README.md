@@ -1,4 +1,4 @@
-#Avatar Generator [![Build Status](https://app.travis-ci.com/guidotheelen/avatar_generator.svg?branch=master)](https://app.travis-ci.com/github/guidotheelen/avatar_generator) [![Coverage Status](https://coveralls.io/repos/github/guidotheelen/avatar_generator/badge.svg?branch=master)](https://coveralls.io/github/guidotheelen/avatar_generator?branch=master)
+#AvatarGenerator [![Build Status](https://app.travis-ci.com/guidotheelen/avatar_generator.svg?branch=master)](https://app.travis-ci.com/github/guidotheelen/avatar_generator) [![Coverage Status](https://coveralls.io/repos/github/guidotheelen/avatar_generator/badge.svg?branch=master)](https://coveralls.io/github/guidotheelen/avatar_generator?branch=master)
 
 Generates an avatar based on the string you put in
 
@@ -29,6 +29,6 @@ Generates an avatar based on the string you put in
 
 ```dart
 AvatarGenerator(
-  seed: value,
+  seed: 'String',
 );
 ```
