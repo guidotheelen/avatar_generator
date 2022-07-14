@@ -1,5 +1,5 @@
 name: avatar_generator
-description: Generates an avatar based on the string you put in.
+description: Generates an avatar based on the string you put in
 version: 0.0.2
 homepage: https://github.com/guidotheelen/avatar_generator
 
