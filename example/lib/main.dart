@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 valueListenable: seed,
                 builder: (_, value, __) => AvatarGenerator(
                   seed: value,
+                  colors: [Colors.green, Colors.black87],
                 ),
               ),
             ),
