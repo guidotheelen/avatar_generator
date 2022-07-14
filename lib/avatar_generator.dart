@@ -34,7 +34,6 @@ class AvatarGenerator extends StatelessWidget {
     final tile = ShapeGrid(
       horizontalTileCount: horizontalTileCount,
       verticalTileCount: verticalTileCount,
-      shapes: Shape.values,
       randomNums: logic.randomNumbers(amount, Shape.values.length),
       colors: logic.randomColors(amount, colors),
     );

@@ -7,16 +7,14 @@ class ShapeGrid extends StatelessWidget {
   final int verticalTileCount;
   final List<Color> colors;
   final List<int> randomNums;
-  final List<Shape> shapes;
 
   const ShapeGrid({
-    Key? key,
+    super.key,
     required this.horizontalTileCount,
     required this.verticalTileCount,
     required this.colors,
     required this.randomNums,
-    required this.shapes,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class ShapeGrid extends StatelessWidget {
                 width: TileLogic.shapeSize,
                 height: TileLogic.shapeSize,
                 decoration: BoxDecoration(
-                  borderRadius: shapes[randomNums[index]].value,
+                  borderRadius: Shape.values[randomNums[index]].value,
                   color: color,
                 ),
               );

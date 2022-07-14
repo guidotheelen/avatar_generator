@@ -7,18 +7,18 @@ class TileLogic {
 
   final String seed;
 
+  int get seedToInt =>
+      ' $seed'.codeUnits.reduce((value, element) => value + element);
+
   TileLogic({
     required this.seed,
   });
 
   List<Color> randomColors(int count, List<Color> colors) => List.generate(
-      count, (i) => colors[Random(seedToInt() + i).nextInt(colors.length)]);
+      count, (i) => colors[Random(seedToInt + i).nextInt(colors.length)]);
 
   List<int> randomNumbers(int count, int max) =>
-      List.generate(count, (i) => Random(seedToInt() + i).nextInt(max));
-
-  int seedToInt() =>
-      ' $seed'.codeUnits.reduce((value, element) => value + element);
+      List.generate(count, (i) => Random(seedToInt + i).nextInt(max));
 }
 
 enum Shape {

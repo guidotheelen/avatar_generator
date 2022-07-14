@@ -8,11 +8,11 @@ class MirroredTiles extends StatelessWidget {
   final bool mirroredVertical;
 
   const MirroredTiles({
-    Key? key,
+    super.key,
     required this.tile,
     required this.mirroredHorizontal,
     required this.mirroredVertical,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
