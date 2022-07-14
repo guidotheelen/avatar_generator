@@ -7,6 +7,7 @@ class ShapeGrid extends StatelessWidget {
   final int verticalTileCount;
   final List<Color> colors;
   final List<int> randomNums;
+  final double tilePadding;
 
   const ShapeGrid({
     super.key,
@@ -14,6 +15,7 @@ class ShapeGrid extends StatelessWidget {
     required this.verticalTileCount,
     required this.colors,
     required this.randomNums,
+    required this.tilePadding,
   });
 
   @override
@@ -27,12 +29,19 @@ class ShapeGrid extends StatelessWidget {
             (xIndex) {
               final index = yIndex * horizontalTileCount + xIndex;
               final color = colors[index];
-              return Container(
-                width: TileLogic.shapeSize,
-                height: TileLogic.shapeSize,
-                decoration: BoxDecoration(
-                  borderRadius: Shape.values[randomNums[index]].value,
-                  color: color,
+              return Padding(
+                padding: EdgeInsets.all(tilePadding),
+                child: Container(
+                  width: TileLogic.shapeSize,
+                  height: TileLogic.shapeSize,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: color,
+                      width: 1.0,
+                    ),
+                    borderRadius: Shape.values[randomNums[index]].value,
+                    color: color,
+                  ),
                 ),
               );
             },

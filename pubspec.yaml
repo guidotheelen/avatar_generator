@@ -1,6 +1,7 @@
 name: avatar_generator
-description: Generates an avatar based on the string you put in
-version: 0.0.4
+description: Generates an avatar based on an input string. The avatar is a
+  generated image that can be used to represent a user.
+version: 0.0.5
 homepage: https://github.com/guidotheelen/avatar_generator
 
 environment:

@@ -13,3 +13,8 @@
 ## 0.0.4
 
 * Improve example
+
+## 0.0.5
+
+* Add border to minimize gap
+* Tile padding

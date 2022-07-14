@@ -7,12 +7,28 @@ import 'shape_grid.dart';
 import 'tile_logic.dart';
 
 class AvatarGenerator extends StatelessWidget {
+  /// The seed used to generate the avatar
   final String seed;
+
+  /// The colors used in the avatar
   final List<Color> colors;
+
+  /// Mirror the selected tiles horizontally
+  /// This doubles the number of tiles in the avatar
   final bool mirroredHorizontally;
+
+  /// Mirror the selected tiles verically
+  /// This doubles the number of tiles in the avatar
   final bool mirroredVertically;
+
+  /// The number of horizontal tiles in the avatar
   final int horizontalTileCount;
+
+  /// The number of vertical tiles in the avatar
   final int verticalTileCount;
+
+  /// The padding between tiles
+  final double tilePadding;
 
   const AvatarGenerator({
     super.key,
@@ -25,6 +41,7 @@ class AvatarGenerator extends StatelessWidget {
     this.mirroredVertically = true,
     this.horizontalTileCount = 2,
     this.verticalTileCount = 2,
+    this.tilePadding = 0,
   });
 
   @override
@@ -36,6 +53,7 @@ class AvatarGenerator extends StatelessWidget {
       verticalTileCount: verticalTileCount,
       randomNums: logic.randomNumbers(amount, Shape.values.length),
       colors: logic.randomColors(amount, colors),
+      tilePadding: tilePadding,
     );
 
     return FittedBox(
